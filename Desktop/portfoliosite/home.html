@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Selection Page</title>
+        <link rel="icon" href="images/head.ico" type="image/x-icon">
+        <style>
+            body {
+                background-color: #ede6d9; 
+                color: #342519; 
+                text-align: center;
+            }
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 20px;
+            }
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+            .button {
+                background-color: #ede6d9;
+                color: #342519;
+                border-color:#342519;
+                display: inline-block;
+                text-decoration: none;
+                border: 2px solid #342519;
+                border-radius: 20px;
+                padding: 10px 20px;
+                width: min(80%, 200px);
+            }
+            .button:hover {
+                background-color: #342519;
+                color: #ede6d9;
+                transform: scale(1.05);
+            }
+            ::selection {
+                background-color: #342519;
+                color: #ede6d9;
+            }
+            html {
+                scroll-behavior: smooth;
+                scrollbar-color: #342519 #ede6d9;
+                scrollbar-width: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 title="Click a button">Choose an option below:</h1>
+
+        <div class="button-container">
+            <a href="about.html" class="button" target="_self">About me</a>
+            <a href="myskills.html" class="button" target="_self">My skills</a>
+            <a href="projects.html" class="button" target="_self">My projects</a>
+            <a href="experience.html" class="button" target="_self">My experience</a>
+        </div>
+        <p style="font-size: 18px;" title="Please contact me...">Like what you see so far?</p>
+        
+        <address style="font-size: 18px;" title="That's my email address!">
+            Email me at <a href="mailto:sartyndafy@gmail.com" style="color: #342519;">sartyndafy@gmail.com</a>
+        </address>
+    </body>
+</html>
