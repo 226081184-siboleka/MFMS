@@ -15,8 +15,10 @@
                 font-size: 40px;
             }
             .skills-container {
-                display: grid;
-                grid-template-columns: 250px 250px 250px;
+                display: flex;
+                flex-direction: row;
+                overflow-x: auto; /*Allows horizontal scrolling*/
+                scroll-behavior: smooth;
                 gap: 20px;
                 justify-content: center;
             }
@@ -25,6 +27,7 @@
                 border-radius: 15px;
                 padding: 20px;
                 text-align: left;
+                flex: 0 0 auto; /* Prevents the card from shrinking */
             }
             .skill-card:hover {
                 border:2px solid #342519;
@@ -156,6 +159,14 @@
                 color: #342519;
                 transform: scale(1.05);
             }
+            @media (max-width: 1040px) {
+                .skills-container {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+            }
+        }
         </style>
     </head>
     <body>
