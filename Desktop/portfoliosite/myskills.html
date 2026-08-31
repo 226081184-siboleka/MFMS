@@ -15,12 +15,10 @@
                 font-size: 40px;
             }
             .skills-container {
-                display: flex;
-                flex-direction: row;
-                overflow-x: auto; /*Allows horizontal scrolling*/
-                scroll-behavior: smooth;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 gap: 20px;
-                justify-content: center;
+                width: 100%;
             }
             .skill-card {
                 border: 2px solid #342519;
@@ -159,7 +157,7 @@
                 color: #342519;
                 transform: scale(1.05);
             }
-            @media (max-width: 1040px) {
+            @media (max-width: 600px) {
                 .skills-container {
                 display: flex;
                 flex-direction: column;
