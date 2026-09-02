@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Experience</title>
+        <link rel="icon" href="images/head.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+        <style>
+            body {
+                background-color: #ede6d9; 
+                color: #342519; 
+                text-align: center;
+            }
+            h1 {
+                font-size: 40px;
+                font-family: 'Sniglet';
+            }
+            h3 {
+                font-size: 24px;
+                font-family: 'Sniglet';
+            }
+            .skills-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+            }
+            .skill-card {
+                border: 2px solid #342519;
+                border-radius: 15px;
+                padding: 20px;
+                text-align: left;
+                flex: 0 0 auto; /* Prevents the card from shrinking */
+            }
+            .skill-card:hover {
+                border:2px solid #342519;
+                background-color: #342519;
+                color: #ede6d9;
+            }
+            .menu-button {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                width: 45px;
+                height: 45px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                z-index: 1001; /* Ensure the button is above other elements */
+            }
+            .menu-button span {
+                width: 28px;
+                height: 3px;
+                background-color: #342519;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+                border-radius: 5px;
+            }
+            .menu-button.open span{
+                background-color: #ede6d9;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0; /* Hide the sidebar initially */
+                width: 250px;
+                height: 100%;
+                background-color: #342519;
+                color: #ede6d9;
+                padding: 90px 30px 30px;
+                display: flex;
+                flex-direction: column;
+                transition: left 0.35s ease;
+                z-index: 1000; /* Ensure the sidebar is above other elements */
+                transform: translateX(-100%); /* Hide the sidebar initially */
+                transition: transform 0.35s ease; /* Smooth transition for sliding effect */
+            }
+            .sidebar.open {
+                transform: translateX(0); /* Slide the sidebar into view */
+            }
+            .sidebar nav {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .sidebar nav a {
+                color: #ede6d9;
+                text-decoration: none;
+                font-size: 18px;
+                transition: color 0.2s ease;
+            }
+            .sidebar-button {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                width: 45px;
+                height: 45px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                background: none;
+                border: 2px solid #ede6d9;
+                cursor: pointer;
+                z-index: 1001; /* Ensure the button is above other elements */
+            }
+            .sidebar nav a:hover {
+                transform: translateX(5px);
+            }
+            .menu-button.open span:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .menu-button.open span:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-button.open span:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            .page-content {
+                transition: transform 0.35s ease;
+                width: 90%;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+            .page-content.shifted {
+                transform: translateX(250px); /* Shift the content to the right when the sidebar is open */
+            }
+            ::selection {
+                background-color: #342519;
+                color: #ede6d9;
+            }
+            html {
+                scroll-behavior: smooth;
+                scrollbar-color: #342519 #ede6d9;
+                scrollbar-width: auto;
+            }
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+            .button {
+                background-color: #342519;
+                color: #ede6d9;
+                border-color:#ede6d9;
+                display: inline-block;
+                text-decoration: none;
+                border: 2px solid #ede6d9;
+                border-radius: 20px;
+                padding: 10px 20px;
+                width: min(80%, 200px);
+                margin-top: 1px;
+            }
+            .button:hover {
+                background-color: #ede6d9;
+                color: #342519;
+                transform: scale(1.05);
+            }
+            @media (max-width: 600px) {
+                .skills-container {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="page-content" id="pageContent">
+            <h1 title="So, what have I done so far?">My Experience</h1>
+            <div class="skills-container">
+            <div class="skill-card">
+                <h3>Founder and small business owner – Press on nails</h3>
+                <h4>June 2026 – Present</h4>
+                <ul style="list-style-type: none; padding: 0;">
+                    <p>Communicated directly with customers and managed custom orders.</p>
+                    <p>Developed product pricing by calculating material costs, packaging expenses
+                        and profit margins.</p>
+                    <p>Managed inventory and purchasing of materials</p>
+                </ul>
+            </div>
+            </div>
+            <p style="font-size: 18px; text-align: center;" title="Please contact me...">Like what you see so far?</p>
+            <address style="font-size: 18px;" title="That's my email address!">Email me at <a href="mailto:sartyndafy@gmail.com" style="color: #342519;">sartyndafy@gmail.com</a>
+            </address>
+        </div>
+        <button class="menu-button" onclick="toggleMenu()" aria-label="Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <aside class="sidebar" id="sidebar">
+            <nav>
+                <a href="index.html" class="button">Landing Page</a>
+                <a href="home.html" class="button">Selection Page</a>
+                <a href="about.html" class="button">About Me</a>
+                <a href="projects.html" class="button">Projects</a>
+                <a href="experience.html" class="button">Experience</a>
+                <a href="documents/CV.pdf" target="_blank" class="button">CV</a>
+            </nav>
+        </aside>
+        <script>
+            function toggleMenu() {
+                const sidebar = document.getElementById('sidebar');
+                const button = document.querySelector('.menu-button');
+                const pageContent = document.getElementById('pageContent');
+
+                sidebar.classList.toggle('open');
+                button.classList.toggle('open');
+                pageContent.classList.toggle('shifted');
+            }
+        </script>
+
+    </body>
+</html>
