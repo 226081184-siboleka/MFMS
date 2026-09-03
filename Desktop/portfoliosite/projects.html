@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Skills</title>
+        <title>My Experience</title>
         <link rel="icon" href="images/head.ico" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,10 +11,11 @@
         <link rel="stylesheet" href="styles.css">
         <style>
             .skills-container {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 20px;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
             }
             .skill-card {
                 border: 2px solid #342519;
@@ -22,11 +23,6 @@
                 padding: 20px;
                 text-align: left;
                 flex: 0 0 auto; /* Prevents the card from shrinking */
-            }
-            .skill-card:hover {
-                border:2px solid #342519;
-                background-color: #342519;
-                color: #ede6d9;
             }
             .menu-button {
                 position: fixed;
@@ -145,51 +141,14 @@
     </head>
     <body>
         <div class="page-content" id="pageContent">
-            <h1 title="So, what am I good at?">My Skills</h1>
+            <h1 title="So, what have I done so far?">My Projects</h1>
             <div class="skills-container">
             <div class="skill-card">
-                <h3>Technical Skills</h3>
+                <h3>Personal Portfolio</h3>
+                <h4>August 2026 | HTML | CSS | JAVA SCRIPT</h4>
                 <ul style="list-style-type: none; padding: 0;">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>Git & Github</p>
-                    <p>Responsive web design</p>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h3>Design & Creative</h3>
-                <ul style="list-style-type: none; padding: 0;">
-                    <p>UI/UX Design</p>
-                    <p>Graphic Design</p>
-                    <p>Visual Design</p>
-                    <p>Prototyping</p>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h3>Problem solving & analysis</h3>
-                <ul style="list-style-type: none; padding: 0;">
-                    <p>Problem solving</p>
-                    <p>Logical thinking</p>
-                    <p>Analytical thinking</p>
-                    <p>Research</p>
-                    <p>Design thinking</p>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h3>Project & Development</h3>
-                <ul style="list-style-type: none; padding: 0;">
-                    <p>Software development</p>
-                    <p>Web development</p>
-                    <p>Project planning</p>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h3>Professional SKills</h3>
-                <ul style="list-style-type: none; padding: 0;">
-                    <p>Communication</p>
-                    <p>Teamwork</p>
-                    <p>Time management</p>
-                    <p>Creativity</p>
+                    <p>Link to site: <a href="https://portfoliosite.sartyndafy.workers.dev" style="color: #342519;" target="_blank">Portfolio</a></p>
+                    <p>Static site to display my experience, skills, and projects.</p>
                 </ul>
             </div>
             </div>
