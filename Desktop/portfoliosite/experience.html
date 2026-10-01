@@ -6,41 +6,11 @@
         <title>My Experience</title>
         <link rel="icon" href="images/head.ico" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
         <style>
-            body {
-                background-color: #ede6d9; 
-                color: #342519; 
-                text-align: center;
-            }
-            h1 {
-                font-size: 40px;
-                font-family: 'Sniglet';
-            }
-            h3 {
-                font-size: 24px;
-                font-family: 'Sniglet';
-            }
-            .skills-container {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                justify-content: center;
-            }
-            .skill-card {
-                border: 2px solid #342519;
-                border-radius: 15px;
-                padding: 20px;
-                text-align: left;
-                flex: 0 0 auto; /* Prevents the card from shrinking */
-            }
-            .skill-card:hover {
-                border:2px solid #342519;
-                background-color: #342519;
-                color: #ede6d9;
-            }
+
             .menu-button {
                 position: fixed;
                 top: 20px;
@@ -134,21 +104,6 @@
             .page-content.shifted {
                 transform: translateX(250px); /* Shift the content to the right when the sidebar is open */
             }
-            ::selection {
-                background-color: #342519;
-                color: #ede6d9;
-            }
-            html {
-                scroll-behavior: smooth;
-                scrollbar-color: #342519 #ede6d9;
-                scrollbar-width: auto;
-            }
-            .button-container {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                align-items: center;
-            }
             .button {
                 background-color: #342519;
                 color: #ede6d9;
@@ -160,11 +115,6 @@
                 padding: 10px 20px;
                 width: min(80%, 200px);
                 margin-top: 1px;
-            }
-            .button:hover {
-                background-color: #ede6d9;
-                color: #342519;
-                transform: scale(1.05);
             }
             @media (max-width: 600px) {
                 .skills-container {
@@ -206,7 +156,7 @@
                 <a href="home.html" class="button">Selection Page</a>
                 <a href="about.html" class="button">About Me</a>
                 <a href="projects.html" class="button">Projects</a>
-                <a href="experience.html" class="button">Experience</a>
+                <a href="myskills.html" class="button">My Skills</a>
                 <a href="documents/CV.pdf" target="_blank" class="button">CV</a>
             </nav>
         </aside>
