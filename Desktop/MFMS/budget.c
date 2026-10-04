@@ -246,7 +246,7 @@ void printBudgetReport(void)
 
 /* ---------- Menu ---------- */
 
-void budgetMenu(void)
+void BudgetMenu(void)
 {
     char buf[32];
     char *end;
