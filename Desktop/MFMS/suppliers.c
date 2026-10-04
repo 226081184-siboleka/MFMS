@@ -49,12 +49,12 @@ void addSupplier(void) {
     while (getchar() != '\n');
 
     if (id <= 0) {
-        printf("Error: ID number must be psotive./n");
+        printf("Error: ID number must be postive.\n");
         return;
     }
 
     if (supplierExists(id)) {
-        printf("Error: Supplier ID %d already exists./n", id);
+        printf("Error: Supplier ID %d already exists.\n", id);
         return;
     }
 
@@ -108,9 +108,9 @@ void displaySuppliers(void) {
         printf("No Suppliers avaiable.\n");
         return;
     }
-    printf("\n-----Suppliers-----\n");
+    printf("\n------------------------------------Suppliers-----------------------------------------------\n");
     printf("%-5s %-22s %-25s %-15s %-15s\n", "ID", "Name", "Email", "Phone", "Town");
-    printf("\n------------------------------------------------------------------------------------------------------\n");
+    printf("\n----------------------------------------------------------------------------------------------\n");
     for (int i = 0; i<supplierCount; i++) {
         printf("%-5d %-22s %-25s %-15s %-15s\n", supplierIDs[i],supplierNames[i],supplierEmails[i],supplierPhones[i],supplierTowns[i]);
     }
