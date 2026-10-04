@@ -47,7 +47,7 @@
 - `countExceededDepartments()`
 - `printBudgetReport()`
 
-### Supplier Managament(student 3)
+## Supplier Managament(student 3)
 **student details:** Sarafina Shilunga, 226106071
 **files:** `suppliers.c``suppliers.h``test_suppliers.c`
 
