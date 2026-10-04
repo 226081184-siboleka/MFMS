@@ -100,7 +100,20 @@ void addSupplier(void) {
     
     supplierCount++;
 
-    printf("Supplier Added Successfully. Total suppliers:%d\n", supplierCount);
+    printf("Supplier Added Successfully. Total suppliers: %d\n", supplierCount);
+}
+
+void displaySuppliers(void) {
+    if (supplierCount == 0) {
+        printf("No Suppliers avaiable.\n");
+        return;
+    }
+    printf("\n-----Suppliers-----\n");
+    prinf("%-5s %-22s %-25s %-15s %-15s\n", "ID", "Name", "Email", "Phone", "Town");
+    printf("\n------------------------------------------------------------------------------------------------------\n");
+    for (int i = 0; i<supplierCount; i++) {
+        printf("%-5d %-22s %-25s %-15s %-15s\n", supplierIDs[i],supplierNames[i],supplierEmails[i],supplierPhones[i],supplierTowns[i]);
+    }
 }
 void supplierMenu(void) {
     int choice;
