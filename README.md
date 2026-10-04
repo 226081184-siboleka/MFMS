@@ -42,11 +42,10 @@ Housing Allowance
 Transport Allowance
 
 Tax
-Salary Calculation
-text
-Gross Salary = Basic Salary + Housing Allowance + Transport Allowance
-Net Salary   = Gross Salary - Tax
-Tax cannot exceed gross salary; the system will prompt for re-entry if this occurs.
+Salary Calculation:
+Gross Salary = Basic Salary + Housing Allowance + Transport Allowance;
+Net Salary   = Gross Salary - Tax;
+
 
 Input Validation
 IDs: Must be unique and non-empty
@@ -71,3 +70,20 @@ Maximum email length: 60 characters
 Maximum level length: 20 characters
 
 *All monetary inputs and values will be saved in N$
+
+How my functions work:
+main() → employeeMenu(), displayEmployeeReport(), readIntInRange()
+
+employeeMenu() → addEmployee(), displayEmployees(), searchEmployee(), calculateAndShowSalary(), displayEmployeeReport(), readIntInRange()
+
+addEmployee() → readLine(), findEmployeeIndex(), readNonNegativeFloat(), calculateSalary()
+
+displayEmployees() → calculateSalary()
+
+searchEmployee() → readLine(), printEmployee()
+
+calculateAndShowSalary() → readLine(), findEmployeeIndex(), calculateSalary()
+
+printEmployee() → calculateSalary()
+
+readLine(), readNonNegativeFloat(), readIntInRange() → standard library functions only
