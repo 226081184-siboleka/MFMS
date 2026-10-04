@@ -1,9 +1,28 @@
-
 #include <stdio.h>
 #include <string.h>
 #include "employees.h"
 #include "input.h"
 
+/* ---------- Forward declarations (internal helpers) ---------- */
+static void printEmployee(const Employee *e);
+
+/* ---------- Salary calculation ---------- */
+void calculateSalary(const Employee *e, float *gross, float *net)
+{
+    *gross = e->basicSalary + e->housingAllowance + e->transportAllowance;
+    *net   = *gross - e->tax;
+}
+
+/* ---------- Lookup ---------- */
+int findEmployeeIndex(const Employee employees[], int count, const char *id)
+{
+    for (int i = 0; i < count; i++)
+        if (strcmp(employees[i].id, id) == 0)
+            return i;
+    return -1;
+}
+
+/* ---------- Print one employee (helper) ---------- */
 static void printEmployee(const Employee *e)
 {
     float gross, net;
@@ -22,20 +41,7 @@ static void printEmployee(const Employee *e)
     printf("  Net salary : N$%.2f\n", net);
 }
 
-int findEmployeeIndex(const Employee employees[], int count, const char *id)
-{
-    for (int i = 0; i < count; i++)
-        if (strcmp(employees[i].id, id) == 0)
-            return i;
-    return -1;
-}
-
-void calculateSalary(const Employee *e, float *gross, float *net)
-{
-    *gross = e->basicSalary + e->housingAllowance + e->transportAllowance;
-    *net   = *gross - e->tax;
-}
-
+/* ---------- Add ---------- */
 void addEmployee(Employee employees[], int *count)
 {
     if (*count >= MAX_EMPLOYEES) {
@@ -45,6 +51,7 @@ void addEmployee(Employee employees[], int *count)
 
     Employee e;
 
+    /* ID: non-empty and unique */
     for (;;) {
         readLine("Enter employee ID: ", e.id, sizeof e.id);
         if (strlen(e.id) == 0)
@@ -55,6 +62,7 @@ void addEmployee(Employee employees[], int *count)
             break;
     }
 
+    /* Name: non-empty */
     do {
         readLine("Enter employee name: ", e.name, sizeof e.name);
         if (strlen(e.name) == 0)
@@ -85,6 +93,7 @@ void addEmployee(Employee employees[], int *count)
     printf("\nEmployee \"%s\" added. Net salary: N$%.2f\n", e.name, net);
 }
 
+/* ---------- Display all ---------- */
 void displayEmployees(const Employee employees[], int count)
 {
     if (count == 0) {
@@ -106,6 +115,7 @@ void displayEmployees(const Employee employees[], int count)
     printf("\nTotal employees: %d\n", count);
 }
 
+/* ---------- Search ---------- */
 void searchEmployee(const Employee employees[], int count)
 {
     if (count == 0) {
@@ -130,15 +140,22 @@ void searchEmployee(const Employee employees[], int count)
         printf("\nNo employee found for \"%s\".\n", key);
 }
 
+/* ---------- Salary breakdown by ID ---------- */
 void calculateAndShowSalary(const Employee employees[], int count)
 {
-    if (count == 0) { printf("\nNo employees registered yet.\n"); return; }
+    if (count == 0) {
+        printf("\nNo employees registered yet.\n");
+        return;
+    }
 
     char key[MAX_ID_LEN];
     readLine("Enter employee ID: ", key, sizeof key);
 
     int idx = findEmployeeIndex(employees, count, key);
-    if (idx == -1) { printf("\nNo employee with ID %s.\n", key); return; }
+    if (idx == -1) {
+        printf("\nNo employee with ID %s.\n", key);
+        return;
+    }
 
     float gross, net;
     calculateSalary(&employees[idx], &gross, &net);
@@ -155,9 +172,13 @@ void calculateAndShowSalary(const Employee employees[], int count)
     printf("  Net salary          : N$%10.2f\n", net);
 }
 
+/* ---------- Summary report ---------- */
 void displayEmployeeReport(const Employee employees[], int count)
 {
-    if (count == 0) { printf("\nNo employees registered yet.\n"); return; }
+    if (count == 0) {
+        printf("\nNo employees registered yet.\n");
+        return;
+    }
 
     float totalBasic = 0, totalHousing = 0, totalTransport = 0;
     float highest = employees[0].basicSalary;
@@ -180,7 +201,4 @@ void displayEmployeeReport(const Employee employees[], int count)
     printf("  Highest basic salary        : N$%.2f\n", highest);
     printf("  Lowest  basic salary        : N$%.2f\n", lowest);
     printf("=======================================\n");
-}
-void EmployeeMenu(void){
-  //code here or anywhere appropriate
 }
