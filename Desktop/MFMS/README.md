@@ -1,3 +1,15 @@
+### Asset Management: [ Tomas K-O Sheefeni] ([ 226041069 ]  { --STUDENT 4-- } )
+
+**Files:** `assets.c`, `assets.h`
+
+**Features:**
+- Add assets (ID, name, type, purchase value, department, condition)
+- Display all assets in a table
+- Search assets by ID, name, type or department
+- Asset report with total count, total value and assets in poor condition
+
+**Main functions:** `assetMenu()`, `addAsset()`, `displayAssets()`, `searchAsset()`, `displayAssetReport()`, `getAssetCount()`, `getTotalAssetValue()`
+
 ## Reports Module (Student 5)
 
 **Files:** `reports.c`, `reports.h`
