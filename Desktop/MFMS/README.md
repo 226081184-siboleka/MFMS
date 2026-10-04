@@ -33,12 +33,5 @@
 **Files created:** 'assets.c', 'assets.h', 'budget.c', 'budget.h', 'employees.c', 'employees.h', 'main.c', 'reports.c', 'reports.h', 'suppliers.c', and 'suppliers.h'
 
 -In main.c; main navigation menu where users will choose which module to interact with.
+
 -Header files edited so they are linked to main.c
-
-**Features:**
-- Add assets (ID, name, type, purchase value, department, condition)
-- Display all assets in a table
-- Search assets by ID, name, type or department
-- Asset report with total count, total value and assets in poor condition
-
-**Main functions:** `assetMenu()`, `addAsset()`, `displayAssets()`, `searchAsset()`, `displayAssetReport()`, `getAssetCount()`, `getTotalAssetValue()`
