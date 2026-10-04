@@ -57,7 +57,7 @@ int main(void){
         printf("Exiting...\n");
         return 0;
       default:
-        printf("Please choose a number between 1 and 6: \n);
+        printf("Please choose a number between 1 and 6: \n");
         break;
     }
   }
