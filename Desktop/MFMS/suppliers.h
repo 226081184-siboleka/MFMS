@@ -16,6 +16,6 @@ void compareSuppliers(void);
 
 int getSupplierCount(void);
 int getSupplierId(int index);
-int SupplierExists(int id);
+int supplierExists(int id);
 const char *getSupplierName(int index);
 #endif
