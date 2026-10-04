@@ -54,7 +54,7 @@ void addSupplier(void) {
     }
 
     if (supplierExists(id)) {
-        printf("Error: Supplier ID already exists./n", id);
+        printf("Error: Supplier ID %d already exists./n", id);
         return;
     }
 
@@ -109,7 +109,7 @@ void displaySuppliers(void) {
         return;
     }
     printf("\n-----Suppliers-----\n");
-    prinf("%-5s %-22s %-25s %-15s %-15s\n", "ID", "Name", "Email", "Phone", "Town");
+    printf("%-5s %-22s %-25s %-15s %-15s\n", "ID", "Name", "Email", "Phone", "Town");
     printf("\n------------------------------------------------------------------------------------------------------\n");
     for (int i = 0; i<supplierCount; i++) {
         printf("%-5d %-22s %-25s %-15s %-15s\n", supplierIDs[i],supplierNames[i],supplierEmails[i],supplierPhones[i],supplierTowns[i]);
@@ -146,7 +146,7 @@ void searchSupplier(void) {
         for (int i = 0; i < supplierCount; i++) {
             if (supplierIDs[i] == id) {
                 printf("\nSupplier found:\n");
-                printf("ID:  %D\n", supplierIDs[i]);
+                printf("ID:  %d\n", supplierIDs[i]);
                 printf("Name: %s\n", supplierNames[i]);
                 printf("Email: %s\n", supplierEmails[i]);
                 printf("Phone: %s\n", supplierPhones[i]);
@@ -181,7 +181,7 @@ void searchSupplier(void) {
     }
 }
 
-void compareSupplier(void) {
+void compareSuppliers(void) {
     if (supplierCount < 2) {
         printf("\nNeed at least two suppliers.\n");
         return;
@@ -227,7 +227,7 @@ void compareSupplier(void) {
     printf("%-12s %-25s %-25s\n", "Phone", supplierPhones[idx1], supplierPhones[idx2]);
     printf("%-12s %-25s %-25s\n", "Town", supplierTowns[idx1], supplierTowns[idx2]);
 
-    print("\n Comparison Summary\n");
+    printf("\n Comparison Summary\n");
     if (strcmp(supplierNames[idx1], supplierNames[idx2]) == 0) {
         printf("Names are identical.\n");
     } else {
