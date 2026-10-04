@@ -51,7 +51,7 @@
 
 **Student details:** Sarty Ndeshipanda Ndafyaalako, 226061248
 
-**Files created:** 'assets.c', 'assets.h', 'budget.c', 'budget.h', 'employees.c', 'employees.h', 'main.c', 'reports.c', 'reports.h', 'suppliers.c', and 'suppliers.h'
+**Files created:** `assets.c`, `assets.h`, `budget.c`, `budget.h`, `employees.c`, `employees.h`, `main.c`, `reports.c`, `reports.h`, `suppliers.c`, and `suppliers.h`
 
 - In main.c; main navigation menu where users will choose which module to interact with.
 - Header files edited so they are linked to main.c
@@ -59,3 +59,4 @@
 - Moved code from assets.c outside of main branch to assets.c in main branch, and ensure function calls match main.c.
 - Moved code from assets.h outside of main branch to assets.h in main branch, and ensure function calls match main.c.
 - Approved merge request to suppliers.c and suppliers.h in main branch
+- Edited code in budget.c and budget.h to ensure it matches function call to main.c
