@@ -115,6 +115,71 @@ void displaySuppliers(void) {
         printf("%-5d %-22s %-25s %-15s %-15s\n", supplierIDs[i],supplierNames[i],supplierEmails[i],supplierPhones[i],supplierTowns[i]);
     }
 }
+
+void searchSupplier(void) {
+    if (supplierCount == 0) {
+        printf("\nNo suppliers to search for \n");
+        return;
+    }
+    
+    int mode; int id; char term[SUP_NAME_LEN];
+    printf("\n---- Search Supplier ----\n");
+    printf("1. Search by ID\n");
+    printf("2. Search by Name\n");
+    printf("Choice: ");
+    if (scanf("%d", &mode) != 1) {
+        while (getchar() != '\n');
+        printf("Invaild Input.\n");
+        return;
+    }
+    while (getchar() != '\n');
+
+    if (mode == 1) {
+        printf("Enter Supplier ID: ");
+        if (scanf("%d", &id) != 1) {
+            while (getchar() != '\n');
+            printf("Invaild ID.\n");
+            return;
+        }
+        while (getchar() != '\n');
+
+        for (int i = 0; i < supplierCount; i++); {
+            if (supplierIDs[id] == id) {
+                printf("\nSupplier found:\n");
+                printf("ID:  %D\n", supplierIDs[id]);
+                printf("Name: %s\n", supplierNames[id]);
+                printf("Email: %s\n", supplierEmails[id]);
+                printf("Phone: %s\n", supplierPhones[id]);
+                printf("Town: %s\n", supplierTowns[id]);
+                return;
+            }
+        }
+        printf("No Supplier with that ID found.\n");
+    } else if (mode == 2) {
+        printf("Enter Supplier Name: \n");
+        fgets(term, SUP_NAME_LEN, stdin);
+        term[strcspn(term, "\n")] = '\0';
+
+        if (strlen(term) == 0){
+            printf("search term cant be empty.\n");
+            return;
+        }
+
+        int found = 0;
+        printf("\n Matches\n");
+        for (int i = 0; i < supplierCount; i++) {
+            if (strstr(supplierNames[i], term) != NULL) {
+                printf(" - [%d] %s | %s | %s | %s\n", supplierIDs[i], supplierNames[i], supplierEmails[i], supplierPhones[i], supplierTowns[i]);
+                found = 1;
+            }
+        }
+        if (!found) {
+            printf("No matches found \"%s" "found.\n", term);
+        }
+    } else {
+        printf("Invaild search choice.\n");
+    }
+}
 void supplierMenu(void) {
     int choice;
     do {
