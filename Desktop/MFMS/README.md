@@ -25,3 +25,15 @@
 **main.c**
 
 -Main navigation menu where users will choose which module to interact with.
+
+### Asset Management: [ Tomas K-O Sheefeni] ([ 226041069 ])
+
+**Files:** `assets.c`, `assets.h`
+
+**Features:**
+- Add assets (ID, name, type, purchase value, department, condition)
+- Display all assets in a table
+- Search assets by ID, name, type or department
+- Asset report with total count, total value and assets in poor condition
+
+**Main functions:** `assetMenu()`, `addAsset()`, `displayAssets()`, `searchAsset()`, `displayAssetReport()`, `getAssetCount()`, `getTotalAssetValue()`
