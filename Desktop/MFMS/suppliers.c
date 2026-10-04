@@ -118,7 +118,7 @@ void displaySuppliers(void) {
 
 void searchSupplier(void) {
     if (supplierCount == 0) {
-        printf("\nNo suppliers to search for \n");
+        printf("\nNo suppliers to search for\n");
         return;
     }
     
@@ -129,7 +129,7 @@ void searchSupplier(void) {
     printf("Choice: ");
     if (scanf("%d", &mode) != 1) {
         while (getchar() != '\n');
-        printf("Invaild Input.\n");
+        printf("Invaild input.\n");
         return;
     }
     while (getchar() != '\n');
@@ -143,20 +143,20 @@ void searchSupplier(void) {
         }
         while (getchar() != '\n');
 
-        for (int i = 0; i < supplierCount; i++); {
-            if (supplierIDs[id] == id) {
+        for (int i = 0; i < supplierCount; i++) {
+            if (supplierIDs[i] == id) {
                 printf("\nSupplier found:\n");
-                printf("ID:  %D\n", supplierIDs[id]);
-                printf("Name: %s\n", supplierNames[id]);
-                printf("Email: %s\n", supplierEmails[id]);
-                printf("Phone: %s\n", supplierPhones[id]);
-                printf("Town: %s\n", supplierTowns[id]);
+                printf("ID:  %D\n", supplierIDs[i]);
+                printf("Name: %s\n", supplierNames[i]);
+                printf("Email: %s\n", supplierEmails[i]);
+                printf("Phone: %s\n", supplierPhones[i]);
+                printf("Town: %s\n", supplierTowns[i]);
                 return;
             }
         }
-        printf("No Supplier with that ID found.\n");
+        printf("No supplier with that ID found.\n");
     } else if (mode == 2) {
-        printf("Enter Supplier Name: \n");
+        printf("Enter Supplier Name: ");
         fgets(term, SUP_NAME_LEN, stdin);
         term[strcspn(term, "\n")] = '\0';
 
