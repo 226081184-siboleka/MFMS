@@ -109,3 +109,4 @@
 - Moved code from assets.h outside of main branch to assets.h in main branch, and ensure function calls match main.c.
 - Approved merge request to suppliers.c and suppliers.h in main branch
 - Edited code in budget.c and budget.h to ensure it matches function call to main.c
+- Attempts to edit code failed due to multiple errors in the file employees.c
