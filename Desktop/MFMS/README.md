@@ -1,3 +1,29 @@
+## Employee Management (student 1)
+**Student details:** Kemumuine Ngayozikue Kazondunge, 226100480
+**Files:** `employees.h` , `employees.c`, `inputs.h`,`inputs.c`
+
+## Features
+- **Add Employees** – unique ID, non-empty name, validated numeric inputs
+- **Display Employees** – formatted table with ID, name, department, level, gross, net
+- **Search Employees** – by ID or exact name
+- **Salary Calculation** – gross = basic + housing + transport; net = gross − tax (tax ≤ gross)
+- **Employee Report** – totals, averages, highest and lowest basic salaries
+- **Input Validation** – safe reading of lines, non-negative floats, and ranged integers
+
+ `addEmployee` : employees.c | Add a new employee with validation |
+ `displayEmployees` : employees.c | Show all employees in a table |
+ `searchEmployee` : employees.c | Find employee by ID or name |
+ `calculateAndShowSalary` : employees.c | Show detailed salary breakdown |
+ `displayEmployeeReport` : employees.c | Generate summary statistics |
+ `findEmployeeIndex` : employees.c | Locate employee by ID |
+ `calculateSalary` : employees.c | Compute gross and net salary |
+ `printEmployee` (static) | employees.c | Print full details of one employee |
+ `readLine` : input.c | Read a line of text safely |
+ `readNonNegativeFloat` : input.c | Read a non-negative float |
+ `readIntInRange` : input.c | Read an integer within a range |
+`employeeMenu` (static) : main.c | Employee submenu loop |
+
+
 ## Budget Management (Student 2)
 **student details:** Abel Thomas Mutji, 226095479
 **Files:** `budget.c`, `budget.h`
