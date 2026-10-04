@@ -1,3 +1,26 @@
+## Budget Management (Student 2)
+**student details:** Abel Thomas Mutji, 226095479
+**Files:** `budget.c`, `budget.h`
+
+**Features:**
+- Enter departmental budgets
+- Enter expenditure
+- Calculate remaining budget
+- Determine whether expenditure is within budget
+- Display budget information
+- Identify departments that have exceeded their allocated budget
+
+**Main functions:**
+`BudgetMenu()`, `addDepartmentBudget()`, `enterExpenditure()`, `displayBudgets()`, `displayExceededDepartments()`, `calculateRemaining()`, `isWithinBudget()`
+
+**Reports support:**
+- `getDepartmentCount()`
+- `getTotalAllocated()`
+- `getTotalExpenditure()`
+- `getTotalRemaining()`
+- `countExceededDepartments()`
+- `printBudgetReport()`
+
 ### Supplier Managament(student 3)
 **student details:** Sarafina Shilunga, 226106071
 **files:** `suppliers.c``suppliers.h``test_suppliers.c`
