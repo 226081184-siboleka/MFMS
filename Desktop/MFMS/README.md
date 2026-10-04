@@ -32,15 +32,8 @@
 
 **Files created:** 'assets.c', 'assets.h', 'budget.c', 'budget.h', 'employees.c', 'employees.h', 'main.c', 'reports.c', 'reports.h', 'suppliers.c', and 'suppliers.h'
 
-**Files edited:** 'main.c'
-
-**main.c**
-
--Main navigation menu where users will choose which module to interact with.
-
-### Asset Management: [ Tomas K-O Sheefeni] ([ 226041069 ]  { --STUDENT 4-- } )
-
-**Files:** `assets.c`, `assets.h`
+-In main.c; main navigation menu where users will choose which module to interact with.
+-Header files edited so they are linked to main.c
 
 **Features:**
 - Add assets (ID, name, type, purchase value, department, condition)
