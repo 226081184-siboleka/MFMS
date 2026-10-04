@@ -1,6 +1,6 @@
 #include "suppliers.h"
 
 int main(void) {
-    supplierMenu();
+    SupplierMenu();
     return 0;
 }
