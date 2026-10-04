@@ -186,7 +186,9 @@ void compareSupplier(void) {
         printf("\nNeed at least two suppliers.\n");
         return;
     }
-    int id1, id2; int idx1 = -1; int idx2 =-1;
+    int id1, id2;
+    int idx1 = -1; 
+    int idx2 = -1;
     printf("\n----Compare two suppliers----\n");
     printf("Enter first supplier ID: ");
     if (scanf("%d", &id1) != 1) {
@@ -233,9 +235,9 @@ void compareSupplier(void) {
     }
 
     if (strcmp(supplierTowns[idx1], supplierTowns[idx2]) == 0) {
-        printf("Operate in the same town.\n", supplierTowns[idx1]);
+        printf("Operate in the same town:%s\n", supplierTowns[idx1]);
     } else {
-        printf("Operate in different towns.\n", supplierTowns[idx1], supplierTowns[idx2]);
+        printf("Operate in different towns (%s vs %s)\n", supplierTowns[idx1], supplierTowns[idx2]);
     }
 
     if (strcmp(supplierEmails[idx1], supplierEmails[idx2]) == 0) {
