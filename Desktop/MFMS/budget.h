@@ -5,7 +5,7 @@
 #define DEPT_NAME_LEN   50
 
 /* Menu and user-facing functions */
-void budgetMenu(void);
+void BudgetMenu(void);
 void addDepartmentBudget(void);
 void enterExpenditure(void);
 void displayBudgets(void);
