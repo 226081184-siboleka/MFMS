@@ -32,6 +32,6 @@
 
 **Files created:** 'assets.c', 'assets.h', 'budget.c', 'budget.h', 'employees.c', 'employees.h', 'main.c', 'reports.c', 'reports.h', 'suppliers.c', and 'suppliers.h'
 
--In main.c; main navigation menu where users will choose which module to interact with.
-
--Header files edited so they are linked to main.c
+- In main.c; main navigation menu where users will choose which module to interact with.
+- Header files edited so they are linked to main.c
+- Function calls from '.c' files to header files
