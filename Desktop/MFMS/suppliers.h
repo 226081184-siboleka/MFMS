@@ -8,7 +8,7 @@
 #define SUP_PHONE_LEN 20 
 #define SUP_TOWN_LEN 50
 
-void supplierMenu(void);
+void SupplierMenu(void);
 void addSupplier(void);
 void displaySuppliers(void);
 void searchSupplier(void);

@@ -246,7 +246,7 @@ void compareSuppliers(void) {
         printf("Emails  are different.\n");
     }
 }
-void supplierMenu(void) {
+void SupplierMenu(void) {
     int choice;
     do {
         printf("\nSupplier Management Menu:\n");
@@ -278,4 +278,4 @@ void supplierMenu(void) {
         }
     } while (choice != 0);
 }
- 
+
