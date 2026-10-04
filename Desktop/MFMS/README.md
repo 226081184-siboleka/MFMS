@@ -23,4 +23,5 @@
 **Files edited:** 'main.c'
 
 **main.c**
+
 -Main navigation menu where users will choose which module to interact with.
