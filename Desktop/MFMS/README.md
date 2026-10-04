@@ -1,3 +1,21 @@
+### Supplier Managament(student 3)
+**student details:** Sarafina Shilunga, 226106071
+**files:** 'suppliers.c''suppliers.h''test_suppliers.c'
+
+***What it does***
+- Add suppliers (ID, name, email, phone, town) with valdation
+- Display all suppliers in a table
+- Search by ID or by name (using strstr)
+- Compare two suppliers using strcmp
+
+***Functions***
+-supplierMenu()
+-addSupplier()
+-displaySuppliers()
+-compareSupplier
+-getSupplierCount(), getSupplierID(), getSupplierName(), getSupplierExists() 
+
+
 ### Asset Management: [ Tomas K-O Sheefeni] ([ 226041069 ]  { --STUDENT 4-- } )
 
 **Files:** `assets.c`, `assets.h`
