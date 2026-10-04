@@ -53,3 +53,5 @@
 - In main.c; main navigation menu where users will choose which module to interact with.
 - Header files edited so they are linked to main.c
 - Function calls from '.c' files to header files
+- - Moved code from assets.c outside of main branch to assets.c in main branch, and ensure function calls match main.c.
+- Moved code from assets.h outside of main branch to assets.h in main branch, and ensure function calls match main.c.
