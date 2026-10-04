@@ -180,6 +180,70 @@ void searchSupplier(void) {
         printf("Invaild search choice.\n");
     }
 }
+
+void compareSupplier(void) {
+    if (supplierCount < 2) {
+        printf("\nNeed at least two suppliers.\n");
+        return;
+    }
+    int id1, id2; int idx1 = -1; int idx2 =-1;
+    printf("\n----Compare two suppliers----\n");
+    printf("Enter first supplier ID: ");
+    if (scanf("%d", &id1) != 1) {
+        while (getchar() != '\n');
+        printf("Invaild ID.\n");
+        return;
+    }
+    while (getchar() != '\n');
+
+    printf("Enter second supplier ID: ");
+    if (scanf("%d", &id2) != 1) {
+        while (getchar() != '\n');
+        printf("Invaild ID.\n");
+        return;
+    }
+    while (getchar() != '\n');
+
+    for (int i = 0; i < supplierCount; i++) {
+        if (supplierIDs[i] == id1) idx1 = i;
+        if (supplierIDs[i] == id2) idx2 = i;
+    }
+    if (idx1 == -1) {
+        printf("No Supplier with ID %d.\n", id1);
+        return;
+    }
+     if (idx2 == -1) {
+        printf("No Supplier with ID %d.\n", id2);
+        return;
+    }
+    printf("\n%-12s %-25s %-25s\n", "Field", "Supplier A", "Supplier B");
+    printf("---------------------------------------------------------------------------\n");
+
+    printf("%-12s %-25d %-25d\n", "ID", supplierIDs[idx1], supplierIDs[idx2]);
+    printf("%-12s %-25s %-25s\n", "Name", supplierNames[idx1], supplierNames[idx2]);
+    printf("%-12s %-25s %-25s\n", "Email", supplierEmails[idx1], supplierEmails[idx2]);
+    printf("%-12s %-25s %-25s\n", "Phone", supplierPhones[idx1], supplierPhones[idx2]);
+    printf("%-12s %-25s %-25s\n", "Town", supplierTowns[idx1], supplierTowns[idx2]);
+
+    print("\n Comparison Summary\n");
+    if (strcmp(supplierNames[idx1], supplierNames[idx2]) == 0) {
+        printf("Names are identical.\n");
+    } else {
+        printf("Names are different.\n");
+    }
+
+    if (strcmp(supplierTowns[idx1], supplierTowns[idx2]) == 0) {
+        printf("Operate in the same town.\n", supplierTowns[idx1]);
+    } else {
+        printf("Operate in different towns.\n", supplierTowns[idx1], supplierTowns[idx2]);
+    }
+
+    if (strcmp(supplierEmails[idx1], supplierEmails[idx2]) == 0) {
+        printf("Emails are identical. (potential duplicate)\n");
+    } else {
+        printf("Emails  are different.\n");
+    }
+}
 void supplierMenu(void) {
     int choice;
     do {
