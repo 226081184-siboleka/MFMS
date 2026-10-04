@@ -110,3 +110,18 @@
 - Approved merge request to suppliers.c and suppliers.h in main branch
 - Edited code in budget.c and budget.h to ensure it matches function call to main.c
 - Attempts to edit code failed due to multiple errors in the file employees.c
+
+
+##  Testing and documenting (Student 7)
+
+**Student details:** simasiku siboleka 22608184
+
+Testing and Documenting the codes 
+
+Modular structure. The program is split into one source/header pair per module (employees, budget, suppliers, assets, reports), with main.c containing only the menu loop and calls to module functions. This avoids one large main() function.
+Data storage. Records are held in arrays (e.g. parallel arrays or arrays of fixed-size character strings) with a counter for the number of records stored.
+Control flow. main() displays the menu in a loop and uses a switch statement to call the relevant module function. Each module has its own sub-menu.
+Key algorithms. - Search: loops through the stored records and compares the search key with strcmp(). - Salary: calculateSalary() receives basic salary and allowances as parameters and returns the total. - Budget: calculateBudget() returns allocated minus expenditure; an if/else determines the status. - Reports: loops compute totals, average, highest and lowest values.
+String handling. strlen() is used to detect empty input, strcmp() for searching and matching, strcpy() for storing names, and strcat() for building display text where appropriate.
+Validation. Dedicated helper functions read and check integer and decimal input, reject negative values, and re-prompt until valid.
+
