@@ -1,0 +1,10 @@
+#complied binaries
+*.exe
+*.out
+test_sup
+
+#Object files
+*.o
+
+#VS Code settings
+*.vscodes
