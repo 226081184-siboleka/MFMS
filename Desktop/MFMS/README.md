@@ -12,3 +12,15 @@
 - Employee Report and Supplier Report: in progress, waiting for the Employee and Supplier modules
 
 **How it works:** The Reports module keeps no data of its own. It reads totals and records from the other modules by calling their functions.
+
+
+## Main menu, functions, validation and integration (Student 6)
+
+**Student details:** Sarty Ndeshipanda Ndafyaalako, 226061248
+
+**Files created:** 'assets.c', 'assets.h', 'budget.c', 'budget.h', 'employees.c', 'employees.h', 'main.c', 'reports.c', 'reports.h', 'suppliers.c', and 'suppliers.h'
+
+**Files edited:** 'main.c'
+
+**main.c**
+-Main navigation menu where users will choose which module to interact with.
