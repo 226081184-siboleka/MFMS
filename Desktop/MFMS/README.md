@@ -110,6 +110,7 @@
 - Approved merge request to suppliers.c and suppliers.h in main branch
 - Edited code in budget.c and budget.h to ensure it matches function call to main.c
 - Attempts to edit code failed due to multiple errors in the file employees.c
+- Compilation failed, undefined reference to "employeeMenu" 
 
 
 ##  Testing and documenting (Student 7)
