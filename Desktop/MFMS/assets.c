@@ -364,4 +364,3 @@ void AssetMenu(void)
         }
     } while (choice != 5);
 }
-}
