@@ -24,11 +24,11 @@ void DisplayMenu(void){
   printf("  5. Report\n");
   printf("  6. Exit\n");
   printf("-----------------------------------------\n");
-  printf("  Please choose a number from 1 to 6: "\n);
+  printf("  Please choose a number from 1 to 6: \n");
 
 //Choosing number
 int main(void){
-  int Choice = 0
+  int Choice = 0;
   while(1){
     DisplayMenu();
     //Check number that was input
