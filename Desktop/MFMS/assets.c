@@ -23,19 +23,21 @@ static char assetCondition[MAX_ASSETS][COND_LEN];
 static int assetCount = 0;
 
 /* Read a line safely and remove the newline */
-static void readLine(const char *prompt, char *buffer, int size){
+static void readLine(const char *prompt, char *buffer, int size)
+{
     int len, ch;
+
     printf("%s", prompt);
     if (fgets(buffer, size, stdin) == NULL) {
         buffer[0] = '\0';
         return;
     }
+
     len = (int)strlen(buffer);
     if (len > 0 && buffer[len - 1] == '\n') {
         buffer[len - 1] = '\0';
     } else {
         while ((ch = getchar()) != '\n' && ch != EOF) {
-          //is something supposed to be here??
             ;
         }
     }
@@ -123,6 +125,7 @@ static int containsIgnoreCase(const char *text, const char *part)
     if (partLen == 0 || partLen > textLen) {
         return 0;
     }
+
     for (i = 0; i <= textLen - partLen; i++) {
         for (j = 0; j < partLen; j++) {
             if (tolower((unsigned char)text[i + j]) !=
@@ -156,10 +159,10 @@ static void chooseAssetType(char *dest)
     printf("4. Equipment\n5. Office Furniture\n6. Other\n");
 
     switch (readIntInRange("Select type (1-6): ", 1, 6)) {
-        case 1: strcpy(dest, "Vehicle");          break;
-        case 2: strcpy(dest, "Computer");         break;
-        case 3: strcpy(dest, "Building");         break;
-        case 4: strcpy(dest, "Equipment");        break;
+        case 1: strcpy(dest, "Vehicle"); break;
+        case 2: strcpy(dest, "Computer"); break;
+        case 3: strcpy(dest, "Building"); break;
+        case 4: strcpy(dest, "Equipment"); break;
         case 5: strcpy(dest, "Office Furniture"); break;
         default: readNonEmpty("Enter asset type: ", dest, TYPE_LEN); break;
     }
@@ -172,9 +175,9 @@ static void chooseCondition(char *dest)
 
     switch (readIntInRange("Select condition (1-4): ", 1, 4)) {
         case 1: strcpy(dest, "Excellent"); break;
-        case 2: strcpy(dest, "Good");      break;
-        case 3: strcpy(dest, "Fair");      break;
-        default: strcpy(dest, "Poor");     break;
+        case 2: strcpy(dest, "Good"); break;
+        case 3: strcpy(dest, "Fair"); break;
+        default: strcpy(dest, "Poor"); break;
     }
 }
 
@@ -285,6 +288,7 @@ void searchAsset(void)
         } else {
             field = assetDept[i];
         }
+
         if (containsIgnoreCase(field, keyword)) {
             if (!found) {
                 printTableHeader();
@@ -293,6 +297,7 @@ void searchAsset(void)
             found++;
         }
     }
+
     if (found == 0) {
         printf("No assets matched \"%s\".\n", keyword);
     } else {
@@ -337,6 +342,7 @@ void displayAssetReport(void)
             poor++;
         }
     }
+
     printf("\nTotal assets      : %d\n", assetCount);
     printf("Total asset value : N$%.2f\n", getTotalAssetValue());
     printf("Assets in poor condition: %d\n", poor);
@@ -356,9 +362,9 @@ void AssetMenu(void)
         choice = readIntInRange("Enter your choice: ", 1, 5);
 
         switch (choice) {
-            case 1: addAsset();           break;
-            case 2: displayAssets();      break;
-            case 3: searchAsset();        break;
+            case 1: addAsset(); break;
+            case 2: displayAssets(); break;
+            case 3: searchAsset(); break;
             case 4: displayAssetReport(); break;
             default: break;
         }
