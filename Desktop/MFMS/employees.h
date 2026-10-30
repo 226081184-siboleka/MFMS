@@ -32,4 +32,3 @@ void calculateSalary(const Employee *e, float *gross, float *net);
 void EmployeeMenu(void);
 
 #endif
-#endif
